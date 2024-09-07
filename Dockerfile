@@ -1,14 +1,9 @@
 FROM node:20-alpine3.19
 
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
-
+RUN mkdir -p /opt/app
 WORKDIR /opt/app
-
-COPY package*.json ./
-
+COPY . .
 RUN npm install
-
-COPY --chown=node:node . .
 
 EXPOSE 4000
 

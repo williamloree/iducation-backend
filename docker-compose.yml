@@ -2,13 +2,11 @@ version: "3.7"
 
 services:
   backend:
-    build: .
+    build: ./
     ports:
       - "4000:4000"
     depends_on:
       - db
-    volumes:
-      - .:/home/node/app
   db:
     image: postgres:14.1
     ports:
