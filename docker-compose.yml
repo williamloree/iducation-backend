@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  backend:
+    build: .
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+  db:
+    image: postgres:14.1
+    ports:
+      - "5432:5454"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: iducation
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 8SBwotk2lUX
+
+volumes:
+  postgres_data:
