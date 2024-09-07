@@ -66,7 +66,7 @@ export class User extends BaseEntity {
 
   @BeforeInsert()
   async setSlug() {
-    const concat = this.information.nom + this.information.prenom;
+    const concat = `${this.information.nom}-${this.information.prenom}`;
     this.slug = concat.toLowerCase().replace(/^\s+|\s+$/g, "");
   }
 }
