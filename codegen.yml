@@ -1,0 +1,13 @@
+overwrite: true
+schema: src/typeDefs.ts
+documents: null
+watchConfig:
+  usePolling: true
+  interval: 1000
+generates:
+  src/generated/graphql.ts:
+    config:
+      contextType: "../@types/graphql#Context"
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"

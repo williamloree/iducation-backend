@@ -1,0 +1,20 @@
+.idea/
+.vscode/
+.serverless/
+.build/
+node_modules/
+build/
+tmp/
+temp/
+
+### Intellij ###
+.idea/*
+*..iml
+
+
+### NPM ###
+node_modules/*
+
+### GraphQL ###
+src/generated/*
+src/datas/invoices
