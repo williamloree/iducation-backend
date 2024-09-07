@@ -7,6 +7,8 @@ services:
       - "4000:4000"
     depends_on:
       - db
+    volumes:
+      - .:/home/node/app
   db:
     image: postgres:14.1
     ports:
