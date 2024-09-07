@@ -39,7 +39,7 @@ export const start = async () => {
   AppDataSource.initialize()
 
   const { url } = await startStandaloneServer(server, {
-    listen: { port: 4000, host: "0.0.0.0" },
+    listen: { port: 4001, host: "0.0.0.0" },
     context: async ({ req }) => {
       const authToken = req.headers["authorization"]?.replace("Bearer ", "");
       let currentUser: User | null = null;
